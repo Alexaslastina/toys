@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap5.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background:rgb(204, 239, 248);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+   <h1>Documentation</h1>
+   <h2>Routes</h2>
+   <h3>All HTTP methods are supported. You can use http or https for your requests.</h3>
+<ul>
+<li> <a href = "https://toysdisneyland.herokuapp.com/toys/ " >https://toysdisneyland.herokuapp.com/toys/</a> (GET)- First ten toys: /toys/
+    </li>
+ <li> <a href = "https://toysdisneyland.herokuapp.com/toys/?page=1 " >https://toysdisneyland.herokuapp.com/toys/?page=1</a> (GET)- All toys by pages: /toys/?page=num
+</li>
+
+<li><a href = "https://toysdisneyland.herokuapp.com/toys/?s=doll" >https://toysdisneyland.herokuapp.com/toys/?s=doll</a> (GET)- Gives an option to search specific toy by name or info: /toys/?s=[name or info]</li>
+
+<li><a href = "https://toysdisneyland.herokuapp.com/toys/cat/car" >https://toysdisneyland.herokuapp.com/toys/cat/car</a>  (GET)- Gives an option to look for toys by category:/toys/cat/catName. There is three options: cars, dolls and lego.</li>
+
+<br>
+<li>In order to add a new toy the client must send (POST) request to main adress https://toysdisneyland.herokuapp.com/toys/  as following example { "name": "cleo", "info": "baby-born", "category": "doll", "img_url": "https://www.pexels.com/ru-ru/photo/208087/", "price": 600 }In order to add a toy, the client has to log in, copy the received authentication token and after that client must include the authentication token in header inside the request.</li>
+<br>
+<li>In order to update existing toy the client must send (PUT) request to main adress providing the id of the item you need to update https://toysdisneyland.herokuapp.com/toys/"itemforupdateID" as following with the property changed: example { "name": "house", "info": "constructor", "category": "lego", "img_url": "https://www.pexels.com/ru-ru/photo/208087/", "price": 700 } Authentication token needed in order to fulfill update request. Client must include the authentication token in header inside the request.</li>
+<br>
+<li> In order to delite existing toy the client must provide id of the item as follows (DEL)  https://toysdisneyland.herokuapp.com/toys/"itemforDELETEID" Authentication token needed in order to fulfill update request. Client must include the authentication token in header inside the request.</li>
+
+</ul>
+</body>
+</html>
